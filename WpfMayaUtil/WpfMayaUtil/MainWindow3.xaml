@@ -1,0 +1,74 @@
+﻿<Window x:Class="MainWindow3"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfMayaUtil"
+        mc:Ignorable="d"
+        Title="MainWindow3" Height="450" Width="800" Foreground="White" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+
+   <Window.Resources>
+      <Storyboard x:Key="OpenMenu">
+         <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="gridMenu">
+            <EasingDoubleKeyFrame KeyTime="0" Value="60"/>
+            <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="250"/>
+         </DoubleAnimationUsingKeyFrames>
+      </Storyboard>
+      <Storyboard x:Key="CloseMenu">
+         <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="gridMenu">
+            <EasingDoubleKeyFrame KeyTime="0" Value="250"/>
+            <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="60"/>
+         </DoubleAnimationUsingKeyFrames>
+      </Storyboard>
+   </Window.Resources>
+   <Window.Triggers>
+      <EventTrigger RoutedEvent="ButtonBase.Click" SourceName="btnOpenMenu">
+         <BeginStoryboard Storyboard="{StaticResource OpenMenu}"/>
+      </EventTrigger>
+      <EventTrigger RoutedEvent="ButtonBase.Click" SourceName="btnCloseMenu">
+         <BeginStoryboard Storyboard="{StaticResource CloseMenu}"/>
+      </EventTrigger>
+   </Window.Triggers>
+   <Grid>    
+      <!-- HEADER -->
+      <Grid Height="60" VerticalAlignment="Top" Background="#FF3D628F">
+         <TextBlock Text="Design in WPF" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="16"/>
+      </Grid>
+      <!-- CONTENT -->
+      <Grid Background="LightGray" Margin="60, 60, 0, 0">         
+      </Grid>
+      <!-- MENU -->
+      <Grid Name="gridMenu" Width="60" HorizontalAlignment="Left" Background="#FF073D5D">
+         <Grid.Effect>
+            <DropShadowEffect BlurRadius="2" ShadowDepth="1" Color="#FFAEAEAE"/>
+         </Grid.Effect>
+         <StackPanel>
+            <Grid Height="150" Background="#FF0B5885">
+               <Button x:Name="btnOpenMenu" Height="60" Width="60" HorizontalAlignment="Right" VerticalAlignment="Top"  Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF31577E"
+                  Click="btnOpenMenu_Click">
+                  <Image Source="images/bars.png"  Height="25" Width="25" Margin="10" />
+               </Button>
+               <Button x:Name="btnCloseMenu" Height="60" Width="60" HorizontalAlignment="Right" VerticalAlignment="Top" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF31577E" 
+                  Visibility="Collapsed" Click="btnCloseMenu_Click">
+                  <Image Source="images/long_left_arrow.png"  Height="25" Width="25" Margin="10" />
+               </Button>
+               <Image Height="80" VerticalAlignment="Bottom"/>
+            </Grid>
+            <ListView Name="lvwMenuItems" Background="Transparent" Foreground="White" ScrollViewer.HorizontalScrollBarVisibility="Hidden">
+               <ListViewItem x:Name="itemProcessNotifications" Height="60">
+                  <StackPanel Orientation="Horizontal">
+                     <Image Source="images/envelope.png"  Height="25" Width="25" Margin="10" />
+                     <TextBlock Text="Process SABRE Notifications" VerticalAlignment="Center" Margin="20 10" TextTrimming="WordEllipsis"/>
+                  </StackPanel>
+               </ListViewItem>
+               <ListViewItem x:Name="itemGetLogByPattern" Height="60">
+                  <StackPanel Orientation="Horizontal">
+                     <Image Source="images/files.png"  Height="25" Width="25" Margin="10" />
+                     <TextBlock Text="Get Log by Pattern" VerticalAlignment="Center" Margin="20 10" TextTrimming="WordEllipsis"/>
+                  </StackPanel>
+               </ListViewItem>
+            </ListView>
+         </StackPanel>
+      </Grid>
+   </Grid>
+</Window>
