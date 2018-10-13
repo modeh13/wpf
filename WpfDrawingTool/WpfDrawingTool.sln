@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2003
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfDrawingTool", "WpfDrawingTool\WpfDrawingTool.csproj", "{C84109DB-1BF9-4455-BC00-21713E8AEC0B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DrawingToolLibrary", "DrawingToolLibrary\DrawingToolLibrary.csproj", "{4445AEFD-A541-46A5-AD12-BCD9995F058D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestDrawingTool", "UnitTestDrawingTool\UnitTestDrawingTool.csproj", "{EF5A2197-3063-4800-91F2-4F56882210F3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C84109DB-1BF9-4455-BC00-21713E8AEC0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C84109DB-1BF9-4455-BC00-21713E8AEC0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C84109DB-1BF9-4455-BC00-21713E8AEC0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C84109DB-1BF9-4455-BC00-21713E8AEC0B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4445AEFD-A541-46A5-AD12-BCD9995F058D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4445AEFD-A541-46A5-AD12-BCD9995F058D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4445AEFD-A541-46A5-AD12-BCD9995F058D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4445AEFD-A541-46A5-AD12-BCD9995F058D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF5A2197-3063-4800-91F2-4F56882210F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF5A2197-3063-4800-91F2-4F56882210F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF5A2197-3063-4800-91F2-4F56882210F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF5A2197-3063-4800-91F2-4F56882210F3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6C5F5ACA-3177-4E67-AE77-CAA9ED992845}
+	EndGlobalSection
+EndGlobal
