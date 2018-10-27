@@ -1,4 +1,7 @@
 # WPF
+
+<img src="http://www.flamingoajans.com/assets/vendors/devicon/icons/csharp/csharp-plain.svg" alt="C# Logo" width="120" />
+
 This contains some WPF applications developed with .Net Framework as learning.
 
 ## WpfDrawingTool
