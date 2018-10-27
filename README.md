@@ -1,10 +1,10 @@
 # WPF
 This contains some WPF applications developed with .Net Framework as learning.
 
-- **WpfDrawingTool:**
+## WpfDrawingTool
 It's a small application developed for the selection process with HUGE Inc. It's code challenge, basically, the tool receives some commands line to draw on Canvas (Text file) with a few conditions, below, there're the main commands.
 
-## Commands
+### Commands
 - C w h Create Canvas: Should create a new canvas of width w and height h.
 - L x1 y1 x2 y2 Create Line: Should create a new line from (x1,y1) to (x2,y2). Currently only horizontal or vertical lines are supported. Horizontal and vertical lines will be drawn using the 'x' character.
 - R x1 y1 x2 y2 Create Rectangle: Should create a new rectangle, whose upper left corner is (x1,y1) and lower right corner is (x2,y2). Horizontal and vertical lines will be drawn using the 'x' character.
@@ -20,7 +20,7 @@ R 16 1 20 3
 B 10 3 o
 ```
 
-Output file .txt
+The expected output file .txt
 ```
 ----------------------
 |                    |
